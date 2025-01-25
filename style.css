@@ -1,0 +1,231 @@
+/* General Body Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+header {
+  
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.circle1{
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  background: white;
+  position: relative;
+  top: -60px;
+  left: -430px;
+  animation: translate3 20s ease  infinite ;
+  
+  box-shadow: 5px -5px 15px white,
+              -5px 5px 15px white;
+}
+
+.circle2{
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background: white;
+  position: relative;
+  left: -100px;
+  top:-65px;
+  animation-name: translate ;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  box-shadow: 5px -5px 15px white,
+              -5px 5px 15px white;
+}
+.circle3{
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background: white;
+  position: relative;
+  left: -190px;
+  top: 65px;
+  animation-name: translate2 ;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  box-shadow: 5px -5px 15px white,
+              -5px 5px 15px white;
+}
+
+
+
+
+.circle8{
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background: white;
+  position: relative;
+  right: -190px;
+  top: -65px;
+  animation-name: translate ;
+  animation-duration: 4s;
+  
+  animation-iteration-count: infinite;
+  box-shadow: 5px -5px 15px white,
+              -5px 5px 15px white
+}
+.circle9{
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background: white;
+  position: relative;
+  top: 65px;
+  right: -100px;
+  animation-name: translate2;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  box-shadow: 5px -5px 15px white,
+              -5px 5px 15px white
+}
+
+h1 {
+  margin: 0;
+ 
+}
+
+@keyframes translate {
+  0%{
+    translate: 0 -65px;
+    box-shadow: 0;
+
+  } 
+ 
+  100%{
+    translate:0 180px; 
+    
+  }
+
+}
+@keyframes translate2 {
+  0%{
+    translate: 0 65px;
+    box-shadow: 0;
+  } 
+ 
+  100%{
+    translate:0 -180px; 
+  }
+}
+
+ @keyframes translate3 {
+  0%{
+    translate: 0 0px;
+    
+
+  }  
+ 
+  25%{
+    translate: 1350px 0; 
+    
+  }
+
+  50%{
+      translate: 1350px  120px ;
+    
+    
+  }
+  75%{
+    translate: 10px 120px;
+  }
+  100%{
+    translate: 0 0;
+  }
+}  
+
+
+/* Bucket List Section */
+#bucket-list {
+  padding: 20px;
+  max-width: 800px;
+  margin: 18px auto;
+  background-color: white;
+  box-shadow: 0px 0px 10px rgba(94, 69, 69, 0.788);
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: rgb(107, 77, 77);
+  margin-bottom: 20px;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+li {
+  background-color: #fafafa;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  font-size: 1.1rem;
+}
+
+li i {
+  margin-right: 10px;
+  color: #ffcc00;
+  font-size: 1.3rem;
+}
+
+li.completed i {
+  color: green;
+}
+
+li.pending i {
+  color: #ffcc00;
+}
+
+/* Footer Styling */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+
+/* Responsive Design with Media Queries */
+@media (max-width: 600px) {
+  header {
+    padding: 1rem;
+    
+  }
+  header .circle1{
+    width: 40px;
+    height: 40px;
+    animation: none;
+  }
+  
+  #bucket-list {
+    padding: 15px;
+    margin: 15px 10px;
+  }
+
+  li {
+    font-size: 1rem;
+  }
+
+  footer {
+    font-size: 0.9rem;
+  }
+}
